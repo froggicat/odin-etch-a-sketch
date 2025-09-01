@@ -1,8 +1,19 @@
-.cell {
-    width: 50px;
-    height: 50px;
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.column {
     background-color: pink;
-    border: 2px;
-    border-style: solid;
-    border-color: black;
+    padding: 1rem;
+    /*flex: 1;*/
+    /* will need to remove this and make it flexible in order to stay within the same size container */
+    width: 15px;
+    height: 15px;
 }
