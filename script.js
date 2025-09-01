@@ -1,10 +1,10 @@
 const btn = document.querySelector("button")
 const container = document.querySelector("#container");
-const row = document.createElement("div");
-const column = document.createElement("div");
 
 //function to remove and then remake the grid when button is clicked
 function remakeGrid(width, height) {
+    //delete old pad
+    container.innerHTML = "";
     //make the new sketchpad
     for (let i = 0; i < height; i++) {
         const row = document.createElement("div");
@@ -25,5 +25,9 @@ function remakeGrid(width, height) {
 btn.addEventListener("click", () => {
     const width = prompt("How many squares wide do you want your sketchpad?");
     const height = prompt("How many squares high do you want your sketchpad?");
-    remakeGrid(width, height);
+    if (width <= 100 && height <= 100) {
+        remakeGrid(width, height);
+    } else {
+        alert("sorry! no numbers above 100 :)")
+    }
 })

@@ -1,19 +1,21 @@
 #container {
-    max-width: 960px;
+    width: 700px;
+    height:700px;
     margin: 0 auto;
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .row {
     display: flex;
-    gap: 5px;
-    margin-bottom: 5px;
+    gap: 1px;
+    flex: 1;
 }
 
 .column {
     background-color: pink;
-    padding: 1rem;
-    /*flex: 1;*/
-    /* will need to remove this and make it flexible in order to stay within the same size container */
-    width: 15px;
-    height: 15px;
+    flex: 1 1 0;
+    box-sizing: border-box;
 }
